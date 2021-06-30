@@ -16,10 +16,11 @@
 
 from pyrogram import Client
 import asyncio
-from DaisyXMusic.config import SUDO_USERS, PMPERMIT
+from DaisyXMusic.config import SUDO_USERS
+from DaisyXMusic.config import PMPERMIT
 from pyrogram import filters
 from pyrogram.types import Message
-from DaisyXMusic.services.callsmusic.callsmusic import client as USER
+from DaisyXMusic.services.callsmusic import client as USER
 
 PMSET =True
 pchats = []
@@ -80,4 +81,4 @@ async def rmpmPermiat(client: USER, message: Message):
         pchats.remove(chat_id)
         await message.reply_text("Dispprooved to PM")
         return
-    message.continue_propagation()    
+    message.continue_propagation()
